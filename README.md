@@ -133,6 +133,9 @@ Power BI was used to create an interactive dashboard that includes:
 
 Interactive filters allow users to explore data dynamically.
 
+# Dashboard Preview
+![Power BI Dashboard](powerbi_dashboard.png)
+
 ---
 
 # Key Insights
