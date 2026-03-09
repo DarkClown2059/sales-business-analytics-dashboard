@@ -1,33 +1,38 @@
 # Sales & Business Analytics Dashboard
 
-A data analytics project built using **Excel and Power BI** to analyze sales performance, profitability, regional trends, and shipping efficiency using the Global Superstore dataset.
+## Dashboard Preview
 
-This project demonstrates data cleaning, business analysis, dashboard creation, and visualization skills commonly required in **Data Analyst and Business Analyst roles**.
+### Excel Dashboard
 
----
+![Excel Dashboard](Excel.png)
 
-# Project Objective
+### Power BI Dashboard
 
-The goal of this project is to analyze retail sales data to identify:
-
-* Revenue trends
-* Profitability by product category
-* Regional sales performance
-* Customer segment behavior
-* Shipping efficiency
-
-The insights from this analysis can help businesses make **data-driven decisions to improve sales and operational efficiency.**
+![Power BI Dashboard](powerbi_dashboard.png)
 
 ---
 
-# Tools Used
+# Project Overview
 
-* **Microsoft Excel**
-* **Power BI**
-* Data Cleaning Techniques
-* Pivot Tables
-* Dashboard Design
-* Data Visualization
+This project analyzes retail sales data from the **Global Superstore dataset** to uncover insights related to revenue growth, profitability, regional performance, and shipping efficiency.
+
+The analysis was conducted using **Microsoft Excel and Power BI**, focusing on transforming raw sales data into actionable business insights through data cleaning, aggregation, and interactive dashboards.
+
+This project simulates a **real-world business analytics workflow**, demonstrating the type of analysis performed by **Data Analysts and Business Analysts in retail and e-commerce companies**.
+
+---
+
+# Business Objectives
+
+The primary objective of this project was to answer key business questions:
+
+* Which regions generate the highest revenue and profit?
+* Which product categories drive the most sales?
+* Which customer segments contribute most to revenue?
+* Are shipping times affecting operational efficiency?
+* What are the monthly trends in sales performance?
+
+The goal was to convert raw transactional data into **insights that support data-driven decision making**.
 
 ---
 
@@ -35,7 +40,7 @@ The insights from this analysis can help businesses make **data-driven decisions
 
 Dataset used: **Global Superstore Sales Dataset**
 
-The dataset contains information about:
+Key fields used in analysis:
 
 * Order Date
 * Ship Date
@@ -45,143 +50,152 @@ The dataset contains information about:
 * Sales
 * Profit
 * Customer Segment
+* Order ID
+
+The dataset represents retail transactions across multiple regions and product categories.
 
 ---
 
-# Excel Analysis
+# Data Preparation (Excel)
 
-Excel was used for:
+Before performing analysis, the dataset was cleaned and structured in Excel.
 
-### Data Cleaning
+### Cleaning Steps
 
-Functions used:
+* Removed extra spaces using `TRIM()`
+* Cleaned non-printable characters using `CLEAN()`
+* Removed duplicate rows
+* Standardized column formats
+* Sorted and filtered inconsistent records
 
-=TRIM()
-=CLEAN()
+### Feature Engineering
 
-Techniques applied:
+Shipping time was calculated to measure operational efficiency.
 
-* Remove duplicates
-* Sorting and filtering
-* Column formatting
-
----
-
-### Business Calculations
-
-Shipping time calculation:
-
+```
 =NETWORKDAYS(Order_Date, Ship_Date)
+```
 
-Total Sales:
+Additional aggregations included:
 
-=SUM(Sales)
-
-Total Profit:
-
-=SUM(Profit)
-
-Average Sales:
-
-=AVERAGE(Sales)
-
-Total Orders:
-
-=COUNTA(Order_ID)
+* Total Sales
+* Total Profit
+* Average Sales per Order
+* Total Number of Orders
 
 ---
 
-### Pivot Table Analysis
+# Exploratory Analysis (Pivot Tables)
 
-Pivot tables were used to analyze:
+Pivot tables were used to explore patterns and identify trends across different business dimensions.
 
-* Sales by Region
-* Sales by Category
-* Profit by Segment
-* Monthly Sales Trends
+Key analyses included:
+
+* **Sales by Region**
+* **Sales by Product Category**
+* **Profit by Customer Segment**
+* **Monthly Sales Trends**
+
+These aggregations helped identify **high-performing segments and potential inefficiencies**.
 
 ---
 
 # Excel Dashboard
 
-The Excel dashboard provides insights into:
+An interactive Excel dashboard was built to provide a quick overview of sales performance.
+
+### Metrics Included
 
 * Total Revenue
 * Total Profit
-* Sales Distribution by Category
-* Regional Sales Performance
-* Profit Trends
+* Order Volume
+* Average Sales
 
-Key charts used:
+### Visualizations Used
 
-* Bar Charts
-* Line Charts
-* Pie Charts
-* Column Charts
+* Bar Charts for category comparison
+* Line Charts for monthly trends
+* Pie Charts for segment distribution
+* Column Charts for regional performance
 
-# Dashboard Preview
-![Power BI Dashboard](Excel.png)
+The dashboard provides a **high-level operational view of business performance**.
 
 ---
 
 # Power BI Dashboard
 
-Power BI was used to create an interactive dashboard that includes:
+Power BI was used to build a more advanced **interactive analytics dashboard**.
 
-* Sales Performance Overview
-* Regional Sales Comparison
-* Profit Analysis
-* Category Performance
-* Monthly Sales Trends
+### Dashboard Features
 
-Interactive filters allow users to explore data dynamically.
+* Sales performance overview
+* Regional sales comparison
+* Profit analysis by category
+* Customer segment analysis
+* Monthly sales trends
 
-# Dashboard Preview
-![Power BI Dashboard](powerbi_dashboard.png)
+Users can dynamically filter data by:
+
+* Region
+* Category
+* Customer Segment
+* Time period
+
+This allows stakeholders to **explore sales performance interactively**.
 
 ---
 
 # Key Insights
 
-Some insights discovered from the analysis:
+Several important insights emerged from the analysis:
 
-* Certain regions generate higher revenue but lower profit margins.
-* Technology products contribute significantly to overall revenue.
-* Shipping delays can impact customer satisfaction.
-* Consumer segment drives the largest portion of sales.
+* Some regions generate **high revenue but relatively lower profit margins**.
+* The **Technology category contributes significantly to total sales**.
+* The **Consumer segment accounts for the largest share of revenue**.
+* Shipping time variability indicates **potential operational inefficiencies** in logistics.
+
+These insights highlight opportunities for **profit optimization and operational improvement**.
 
 ---
 
 # Repository Structure
 
-Report.pbix → Power BI Dashboard File
-Report.pdf → Dashboard Report
-store.xlsx → Cleaned dataset used for analysis
-README.md → Project documentation
+```
+Report.pbix
+Report.pdf
+store.xlsx
+README.md
+Excel.png
+powerbi_dashboard.png
+```
 
 ---
 
 # Skills Demonstrated
 
-* Data Cleaning
-* Data Analysis
-* Business Intelligence
+* Data Cleaning and Preparation
+* Business Data Analysis
 * Dashboard Development
 * Data Visualization
-* Analytical Thinking
+* Exploratory Data Analysis
+* Business Intelligence Reporting
 
 ---
 
-# Author
+# About the Author
 
-Sahil Narula
-Computer Science Student | Aspiring Data Analyst | Interested in Finance & Analytics
+**Sahil Narula**
+
+Computer Science Student
+Interested in **Data Analytics, Finance, and Business Intelligence**
 
 ---
 
 # Future Improvements
 
-* Add SQL analysis
-* Automate ETL process
-* Add advanced Power BI visualizations
-* Deploy dashboards online
+Potential enhancements for the project:
+
+* Add SQL-based analysis
+* Build an ETL pipeline for automated data processing
+* Implement advanced Power BI DAX measures
+* Deploy dashboards using Power BI Service
