@@ -119,6 +119,9 @@ Key charts used:
 * Pie Charts
 * Column Charts
 
+# Dashboard Preview
+![Power BI Dashboard](Excel.png)
+
 ---
 
 # Power BI Dashboard
